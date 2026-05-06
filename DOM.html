@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Original Page Title</title>
+    </head>
+
+    <body>
+        <h2>DOM EXAMPLE</h2>
+        <p id="intro"></p>
+
+        <script>
+            document.title="Modified title using DOM";
+
+            let meta=document.createElement("meta");
+            meta.name="Description";
+            meta.content="This page demostrats using Dom ";
+            document.head.appendChild(meta);
+
+            document.getElementById("intro").innerHTML="Welcome to javascript DOM manupulation";
+
+            let newPara=document.createElement("p");
+            newPara.innerText="This Paragraph was added dynamically using the DOM";
+            document.body.appendChild(newPara);
+
+            document.body.style.backgroundColor="#f0f0f0"
+            
+        </script>
+    </body>
+</html>

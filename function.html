@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Combined Javascript Experiment</title>
+    </head>
+    <body style="font-family: Arial; font-size: 20px;">
+        <h2>Function,Built in Function And Date & Time</h2>
+
+        <h4>Function Example</h4>
+        <p id="func"></p>
+
+        <h4>Built-in Function</h4>
+        <p id="built"></p>
+
+        <h4>Date & Time Function</h4>
+        <p id="date"></p>
+
+        <script>
+            function add(a,b){
+                return a+b;
+            }
+            sumResult=add(20,40);
+            
+            document.getElementById("func").innerHTML="Sum="+sumResult;
+
+            let text="javascript";
+            let builtinoutput="Text Length:"+ text.length+"<br>"+
+            "uppercase:"+ text.toUpperCase()+"<br>"+
+            "square root of 25:"+Math.sqrt(25);
+
+            document.getElementById("built").innerHTML=builtinoutput;
+
+
+            let now=new Date();
+            let dateoutput="Current date:"+ now.toDateString()+"<br>"+
+            "Current time:"+ now.toLocaleDateString()+"<br>"+
+            "Year:"+ now.getFullYear()+"<br>"+
+            "Month:"+(now.getMonth()+1);
+
+            document.getElementById("date").innerHTML=dateoutput;
+        </script>
+    </body>
+</html>
